@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sameer Asif - Digital Marketing Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#f97316'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+.progress-bar {
+position: relative;
+height: 6px;
+background-color: #f1f5f9;
+border-radius: 999px;
+overflow: hidden;
+}
+.progress-bar-fill {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: #3b82f6;
+border-radius: 999px;
+width: 0;
+transition: width 1s ease-out;
+}
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.timeline-connector {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 50%;
+width: 2px;
+background-color: #e2e8f0;
+transform: translateX(-50%);
+z-index: -1;
+}
+.timeline-dot {
+position: absolute;
+top: 24px;
+left: 50%;
+width: 16px;
+height: 16px;
+background-color: #3b82f6;
+border-radius: 50%;
+transform: translateX(-50%);
+z-index: 1;
+}
+.timeline-item {
+position: relative;
+padding-bottom: 40px;
+}
+.timeline-content {
+width: calc(50% - 30px);
+padding: 20px;
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.timeline-item:nth-child(odd) .timeline-content {
+margin-left: auto;
+}
+.expertise-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.expertise-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.portfolio-card {
+transition: transform 0.3s ease;
+overflow: hidden;
+}
+.portfolio-card:hover {
+transform: translateY(-5px);
+}
+.portfolio-card:hover .portfolio-overlay {
+opacity: 1;
+}
+.portfolio-overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(59, 130, 246, 0.9);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.social-icon {
+transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover {
+transform: translateY(-3px);
+color: #3b82f6;
+}
+.scroll-indicator {
+animation: bounce 2s infinite;
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-10px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
+input:focus + label, textarea:focus + label {
+transform: translateY(-24px) scale(0.75);
+color: #3b82f6;
+}
+input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+transform: translateY(-24px) scale(0.75);
+}
+.form-group label {
+transition: transform 0.3s ease, color 0.3s ease;
+transform-origin: 0 0;
+}
+.hero-content h1, .hero-content h2, .hero-content p {
+animation: fadeInUp 1s forwards;
+opacity: 0;
+}
+.hero-content h1 {
+animation-delay: 0.3s;
+}
+.hero-content h2 {
+animation-delay: 0.6s;
+}
+.hero-content p {
+animation-delay: 0.9s;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.testimonial-slide {
+transition: opacity 0.5s ease;
+}
+input[type="range"] {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+background: #f1f5f9;
+border-radius: 999px;
+outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+background: #3b82f6;
+border-radius: 50%;
+cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+width: 18px;
+height: 18px;
+background: #3b82f6;
+border-radius: 50%;
+cursor: pointer;
+border: none;
+}
+input[type="checkbox"] {
+display: none;
+}
+.custom-checkbox {
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 2px solid #cbd5e1;
+border-radius: 4px;
+position: relative;
+cursor: pointer;
+transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+input[type="checkbox"]:checked + .custom-checkbox {
+background-color: #3b82f6;
+border-color: #3b82f6;
+}
+input[type="checkbox"]:checked + .custom-checkbox::after {
+content: '';
+position: absolute;
+top: 3px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.case-study-modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 1000;
+overflow-y: auto;
+}
+.case-study-content {
+background-color: white;
+margin: 50px auto;
+max-width: 900px;
+border-radius: 8px;
+position: relative;
+}
+.close-modal {
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 24px;
+cursor: pointer;
+color: #64748b;
+transition: color 0.3s ease;
+}
+.close-modal:hover {
+color: #3b82f6;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="container mx-auto px-6">
+<nav class="flex items-center justify-between h-20">
+<a href="#home" class="text-2xl font-['Pacifico'] text-gray-800">Sameer</a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
+<a href="#expertise" class="text-gray-600 hover:text-primary transition-colors">Expertise</a>
+<a href="#portfolio" class="text-gray-600 hover:text-primary transition-colors">Portfolio</a>
+<a href="#experience" class="text-gray-600 hover:text-primary transition-colors">Experience</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">Contact Me</a>
+</div>
+<button class="md:hidden text-gray-600 hover:text-primary" id="mobile-menu-button">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</nav>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+<div class="container mx-auto px-6 py-4">
+<div class="flex flex-col space-y-4">
+<a href="#home" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="text-gray-600 hover:text-primary transition-colors">About</a>
+<a href="#expertise" class="text-gray-600 hover:text-primary transition-colors">Expertise</a>
+<a href="#portfolio" class="text-gray-600 hover:text-primary transition-colors">Portfolio</a>
+<a href="#experience" class="text-gray-600 hover:text-primary transition-colors">Experience</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors inline-block text-center whitespace-nowrap">Contact Me</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-blue-50 to-white">
+<div class="container mx-auto px-6 py-24 z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="hero-content">
+<div class="inline-block px-4 py-2 bg-blue-100 rounded-full text-primary mb-6">
+<span class="text-sm font-medium"> Sameer Asif | Digital Marketing Expert</span>
+</div>
+<h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">Transforming Brands Through Digital Excellence</h1>
+<h2 class="text-xl md:text-2xl font-medium text-gray-600 mb-8 leading-relaxed">Specialized in creating data-driven marketing strategies that deliver measurable results and drive business growth.</h2>
+<div class="flex flex-col sm:flex-row gap-4 mb-12">
+<a href="#contact" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-button font-medium transition duration-300 hover:bg-blue-600 shadow-lg whitespace-nowrap group">
+Get in Touch
+<i class="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1"></i>
+</a>
+<a href="#portfolio" class="inline-flex items-center justify-center bg-white text-gray-800 px-8 py-4 rounded-button font-medium border-2 border-gray-200 hover:border-primary transition duration-300 whitespace-nowrap">
+View Portfolio
+</a>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-center">
+<h3 class="text-3xl font-bold text-gray-900 mb-1">30+</h3>
+<p class="text-sm text-gray-600">Projects Completed</p>
+</div>
+<div class="h-12 w-px bg-gray-200"></div>
+<div class="text-center">
+<h3 class="text-3xl font-bold text-gray-900 mb-1">20+</h3>
+<p class="text-sm text-gray-600">Happy Clients</p>
+</div>
+<div class="h-12 w-px bg-gray-200"></div>
+<div class="text-center">
+<h3 class="text-3xl font-bold text-gray-900 mb-1">85%</h3>
+<p class="text-sm text-gray-600">Success Rate</p>
+</div>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<div class="absolute top-0 right-0 w-72 h-72 bg-blue-100 rounded-full filter blur-3xl opacity-30"></div>
+<div class="absolute bottom-0 left-0 w-72 h-72 bg-purple-100 rounded-full filter blur-3xl opacity-30"></div>
+<div class="relative">
+<img src="https://i.postimg.cc/kMhRt6z3/Image.jpg" alt="Marketing Expert" class="rounded-2xl shadow-2xl">
+<div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+<i class="ri-line-chart-line text-green-600"></i>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900">Marketing Growth</p>
+<p class="text-xs text-green-600">+125% This Year</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+</section>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+  <div class="text-center mb-16 fade-in">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+    <div class="w-20 h-1 bg-primary mx-auto"></div>
+  </div>
+  <div class="flex flex-col md:flex-row gap-12 items-center">
+    <!-- Image Section -->
+    <div class="md:w-1/2 fade-in">
+      <div class="rounded-lg overflow-hidden shadow-lg h-[350px] sm:h-[400px] md:h-[500px]">
+        <img src="https://i.postimg.cc/kMhRt6z3/Image.jpg" 
+             alt="Sameer Asif - Digital Marketing Professional"
+             class="w-full h-full object-cover object-center"
+             loading="lazy">
+      </div>
+    </div>
+    
+    <!-- Content Section -->
+    <div class="md:w-1/2 fade-in">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Digital Marketing Strategist</h3>
+      <p class="text-gray-600 mb-6">I'm Sameer Asif, with over 2 years of experience in digital marketing, I specialize in creating data-driven strategies that help brands grow their online presence and achieve measurable results. My approach combines creative storytelling with analytical insights to deliver campaigns that resonate with target audiences and drive conversions.</p>
+      
+      <!-- Skills Section  -->
+      <div class="mb-8">
+        <h4 class="text-lg font-medium text-gray-800 mb-4">Skills</h4>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700">Social Media Marketing</span>
+              <span class="text-gray-500">95%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" data-width="95%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700">Paid Advertising</span>
+              <span class="text-gray-500">90%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" data-width="90%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700">Content Strategy</span>
+              <span class="text-gray-500">85%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-gray-700">Analytics & Reporting</span>
+              <span class="text-gray-500">88%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" data-width="88%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Platform Expertise -->
+      <div>
+        <h4 class="text-lg font-medium text-gray-800 mb-4">Platform Expertise</h4>
+        <div class="flex flex-wrap gap-6">
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-blue-600 bg-blue-50 rounded-full mb-2">
+              <i class="ri-facebook-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">Facebook</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-pink-600 bg-pink-50 rounded-full mb-2">
+              <i class="ri-instagram-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">Instagram</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-blue-800 bg-blue-50 rounded-full mb-2">
+              <i class="ri-linkedin-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">LinkedIn</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-red-600 bg-red-50 rounded-full mb-2">
+              <i class="ri-pinterest-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">Pinterest</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-blue-500 bg-blue-50 rounded-full mb-2">
+              <i class="ri-twitter-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">Twitter</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 flex items-center justify-center text-red-500 bg-red-50 rounded-full mb-2">
+              <i class="ri-google-fill ri-lg"></i>
+            </div>
+            <span class="text-sm text-gray-600">Google Ads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Expertise Section -->
+<section id="expertise" class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">My Expertise</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 max-w-2xl mx-auto">Specialized services designed to elevate your brand's digital presence and drive measurable growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-share-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Social Media Marketing</h3>
+<p class="text-gray-600">Strategic content creation and community management to build brand awareness and engagement across all major social platforms.</p>
+</div>
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-advertisement-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Paid Advertising</h3>
+<p class="text-gray-600">Data-driven ad campaigns on Facebook, Google, and LinkedIn that target the right audience and maximize your ROI.</p>
+</div>
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-pinterest-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Pinterest Marketing</h3>
+<p class="text-gray-600">Specialized Pinterest strategies to drive traffic, increase visibility, and connect with audiences through visual discovery.</p>
+</div>
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-mail-send-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Email Campaigns</h3>
+<p class="text-gray-600">Personalized email marketing strategies that nurture leads, retain customers, and drive conversions through targeted messaging.</p>
+</div>
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-search-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Content Strategy</h3>
+<p class="text-gray-600">Comprehensive SEO and content plans that improve your search visibility and establish your brand as an industry authority.</p>
+</div>
+<div class="expertise-card bg-white p-8 rounded-lg shadow-md fade-in">
+<div class="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+<i class="ri-bar-chart-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-3">Analytics & Reporting</h3>
+<p class="text-gray-600">In-depth analysis and clear reporting of your marketing performance to continuously optimize strategies and improve results.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Portfolio</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 max-w-2xl mx-auto">A selection of my most successful digital marketing campaigns and projects.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520college%2520campus%2520with%2520students%252C%2520educational%2520institution%252C%2520professional%2520photography%252C%2520clean%2520architecture%252C%2520bright%2520and%2520welcoming%2520atmosphere%252C%2520academic%2520setting&width=600&height=400&seq=3&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">KIPS College</h3>
+<p class="text-gray-600 mb-3">Comprehensive digital campaign that increased admissions by 30% year-over-year.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2023 - 2024
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">KIPS College</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Led a multi-channel campaign across social media, email, and paid ads that resulted in a 30% increase in student admissions.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="education">View Case Study</button>
+</div>
+</div>
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=e-commerce%2520mobile%2520app%2520interface%2520on%2520smartphone%252C%2520cashback%2520promotion%2520graphics%252C%2520professional%2520product%2520photography%252C%2520clean%2520design%252C%2520shopping%2520app%2520UI&width=600&height=400&seq=4&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Anymob.pk</h3>
+<p class="text-gray-600 mb-3">Successful cashback campaign strategy that drove a 45% increase in user acquisition.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2023
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">Anymob.pk</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Designed and implemented cashback promotions that increased user acquisition by 45% and boosted retention rates by 25%.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="ecommerce">View Case Study</button>
+</div>
+</div>
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=marketing%2520agency%2520office%2520environment%252C%2520creative%2520workspace%252C%2520professional%2520branding%2520materials%252C%2520marketing%2520strategy%2520documents%252C%2520clean%2520modern%2520design&width=600&height=400&seq=5&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Aura Marketing</h3>
+<p class="text-gray-600 mb-3">Rebranding and digital strategy that established the agency as a local industry leader.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2022 - 2023
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">Aura Marketing</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Developed a comprehensive rebranding strategy and digital presence that increased client acquisition by 60% in 6 months.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="agency">View Case Study</button>
+</div>
+</div>
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=private%2520school%2520campus%252C%2520modern%2520educational%2520facilities%252C%2520students%2520in%2520uniform%252C%2520professional%2520school%2520photography%252C%2520bright%2520classrooms%252C%2520learning%2520environment&width=600&height=400&seq=6&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">KFS School</h3>
+<p class="text-gray-600 mb-3">Social media and content strategy that increased parent engagement by 75%.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2022
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">KFS School</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Created a content strategy focused on showcasing student achievements and school values, resulting in 75% higher parent engagement.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="school">View Case Study</button>
+</div>
+</div>
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520cafe%2520interior%252C%2520stylish%2520food%2520presentation%252C%2520professional%2520food%2520photography%252C%2520restaurant%2520branding%2520materials%252C%2520clean%2520aesthetic%252C%2520coffee%2520shop%2520atmosphere&width=600&height=400&seq=7&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Foodies Cafe</h3>
+<p class="text-gray-600 mb-3">Local marketing campaign that increased foot traffic by 40% and online orders by 65%.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2023
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">Foodies Cafe</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Implemented geo-targeted ads and influencer partnerships that boosted foot traffic by 40% and online orders by 65%.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="restaurant">View Case Study</button>
+</div>
+</div>
+<div class="portfolio-card relative rounded-lg overflow-hidden shadow-md fade-in">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=e-commerce%2520deals%2520website%2520on%2520laptop%2520screen%252C%2520discount%2520promotions%252C%2520professional%2520product%2520photography%252C%2520online%2520shopping%2520interface%252C%2520clean%2520web%2520design&width=600&height=400&seq=8&orientation=landscape'); background-size: cover; background-position: center; height: 250px;"></div>
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Bonfire Deals</h3>
+<p class="text-gray-600 mb-3">E-commerce strategy that resulted in a 120% increase in sales during promotional periods.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+2022 - 2023
+</div>
+</div>
+<div class="portfolio-overlay">
+<h3 class="text-xl font-semibold text-white mb-2">Bonfire Deals</h3>
+<p class="text-white text-sm mb-4 text-center px-6">Developed a multi-channel promotional strategy that increased e-commerce sales by 120% during key campaign periods.</p>
+<button class="px-4 py-2 bg-white text-primary rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap cursor-pointer open-case-study" data-case-study="deals">View Case Study</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section id="experience" class="py-20 relative bg-gradient-to-b from-gray-50/50 to-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Work Experience</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 max-w-2xl mx-auto">My professional journey in the digital marketing landscape.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative">
+<!-- Left Column - Career Overview -->
+<div class="lg:col-span-4">
+<div class="sticky top-24 space-y-6">
+<!-- Career Stats -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-semibold text-gray-800">Career Overview</h3>
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-profile-line text-primary"></i>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-1">2+</div>
+<div class="text-sm text-gray-600">Years Experience</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-1">15+</div>
+<div class="text-sm text-gray-600">Clients Served</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-1">40%</div>
+<div class="text-sm text-gray-600">Avg. Growth</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-1">95%</div>
+<div class="text-sm text-gray-600">Client Satisfaction</div>
+</div>
+</div>
+</div>
+<!-- Expertise Areas -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-semibold text-gray-800">Areas of Expertise</h3>
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-lightbulb-line text-primary"></i>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-gray-700">Digital Strategy</span>
+<span class="text-sm text-gray-500">95%</span>
+</div>
+<div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-gray-700">Social Media</span>
+<span class="text-sm text-gray-500">90%</span>
+</div>
+<div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-gray-700">Content Marketing</span>
+<span class="text-sm text-gray-500">85%</span>
+</div>
+<div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-sm font-medium text-gray-700">Analytics</span>
+<span class="text-sm text-gray-500">88%</span>
+</div>
+<div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tools & Technologies -->
+<div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-semibold text-gray-800">Tools & Technologies</h3>
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full">
+<i class="ri-tools-line text-primary"></i>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-facebook-fill text-blue-600 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">Facebook</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-google-fill text-red-500 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">Google Ads</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-instagram-fill text-pink-600 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">Instagram</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-twitter-fill text-blue-400 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">Twitter</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-linkedin-fill text-blue-700 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">LinkedIn</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+<i class="ri-mail-fill text-gray-700 text-xl mb-2"></i>
+<span class="text-xs text-gray-600">Email</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column - Experience Timeline -->
+<div class="lg:col-span-8">
+<div class="relative">
+<!-- Timeline Line -->
+<div class="absolute left-8 top-0 bottom-0 w-px bg-gray-200"></div>
+<!-- Experience Items -->
+<div class="space-y-12">
+<!-- Current Position -->
+<div class="relative pl-24">
+<div class="absolute left-0 w-16 h-16 bg-primary text-white rounded-xl flex items-center justify-center">
+<i class="ri-building-4-line text-2xl"></i>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-800">Digital Marketing Strategist</h3>
+<p class="text-primary font-medium">Digital Growth Agency</p>
+</div>
+<div class="flex items-center px-4 py-2 bg-primary/10 rounded-full">
+<i class="ri-calendar-line text-primary mr-2"></i>
+<span class="text-sm text-gray-700">May 2025 - Present</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Led comprehensive digital marketing campaigns resulting in 40% increase in client conversions</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Managed multi-platform social media strategies, achieving 65% engagement growth</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Implemented advanced SEO techniques, improving organic traffic by 85%</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Optimized PPC campaigns resulting in 4.2x ROI for clients</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Previous Position 1 -->
+<div class="relative pl-24">
+<div class="absolute left-0 w-16 h-16 bg-blue-100 text-primary rounded-xl flex items-center justify-center">
+<i class="ri-briefcase-4-line text-2xl"></i>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-800">Project Manager Intern</h3>
+<p class="text-primary font-medium">Excelerate</p>
+</div>
+<div class="flex items-center px-4 py-2 bg-gray-50 rounded-full">
+<i class="ri-calendar-line text-gray-500 mr-2"></i>
+<span class="text-sm text-gray-700">Apr 2025 - May 2025</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Assisted in managing digital marketing projects for key clients</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Contributed to campaign strategy development and execution</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Achieved 95% client satisfaction rate on assigned projects</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Previous Position 2 -->
+<div class="relative pl-24">
+<div class="absolute left-0 w-16 h-16 bg-blue-100 text-primary rounded-xl flex items-center justify-center">
+<i class="ri-bar-chart-2-line text-2xl"></i>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-800">Digital Marketing Intern</h3>
+<p class="text-primary font-medium">Excelerate</p>
+</div>
+<div class="flex items-center px-4 py-2 bg-gray-50 rounded-full">
+<i class="ri-calendar-line text-gray-500 mr-2"></i>
+<span class="text-sm text-gray-700">Mar 2025 - Apr 2025</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Audited all social media pages and provided best strategies for improvement</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Managed social media accounts with combined following of 100K+</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Led content strategy initiatives resulting in 85% engagement growth</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Previous Position 3 -->
+<div class="relative pl-24">
+<div class="absolute left-0 w-16 h-16 bg-blue-100 text-primary rounded-xl flex items-center justify-center">
+<i class="ri-user-settings-line text-2xl"></i>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+<div>
+<h3 class="text-xl font-semibold text-gray-800">Digital Strategist Intern</h3>
+<p class="text-primary font-medium">Excelerate</p>
+</div>
+<div class="flex items-center px-4 py-2 bg-gray-50 rounded-full">
+<i class="ri-calendar-line text-gray-500 mr-2"></i>
+<span class="text-sm text-gray-700">Feb 2025 - Mar 2025</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Directed a team of 5 marketing specialists, achieving 125% of quarterly targets</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Developed and executed content strategy across multiple channels</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-green-100 rounded-full mr-3">
+<i class="ri-check-line text-green-500"></i>
+</div>
+<p class="text-gray-600">Increased website conversion rate by 55% through CRO initiatives</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Certifications</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 max-w-2xl mx-auto">Professional certifications that validate my expertise in digital marketing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div class="bg-white p-6 rounded-lg shadow-md fade-in">
+<div class="mb-6">
+<img src="https://i.postimg.cc/7LqVhJJ8/Digital-Strategy-Virtual-Internship-Star-Performer-page-0001.jpg" alt="Digital Strategy Certificate" class="w-full h-auto rounded-lg shadow-sm">
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Digital Strategy Virtual Internship</h3>
+<p class="text-gray-600 mb-3">Saint Louis University & Excelerate</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+March 18, 2025
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md fade-in">
+<div class="mb-6">
+<img src="https://i.postimg.cc/7LXN2PSC/Certificate-page-0001.jpg" alt="Digital Strategy Certificate" class="w-full h-auto rounded-lg shadow-sm">
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Digital Marketing Virtual Internship</h3>
+<p class="text-gray-600 mb-3">Saint Louis University & Excelerate</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+April 01, 2025
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md fade-in">
+<div class="mb-6">
+<img src="https://static.readdy.ai/image/4a367854ac8df5f0f4d66c12960e94b6/d078b34d63faab2d875553e1093d6bf0.jpeg" alt="Digital Strategy Certificate" class="w-full h-auto rounded-lg shadow-sm">
+</div>
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Digital Strategy Virtual Internship</h3>
+<p class="text-gray-600 mb-3">Saint Louis University & Excelerate</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="w-4 h-4 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</span>
+March 18, 2025
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 max-w-2xl mx-auto">What my clients have to say about working with me.</p>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<div id="testimonial-container" class="overflow-hidden">
+<div id="testimonial-slider" class="flex transition-transform duration-500 ease-in-out">
+<div class="testimonial-slide min-w-full px-4">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520middle-aged%2520asian%2520man%2520in%2520business%2520attire%252C%2520principal%2520or%2520education%2520administrator%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520high%2520quality%2520portrait&width=200&height=200&seq=9&orientation=squarish'); background-size: cover; background-position: center;"></div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800">Farhan Ahmed</h3>
+<p class="text-gray-600">Principal, KIPS College</p>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Sameer transformed our digital presence completely. His strategic approach to our admissions campaign resulted in a 30% increase in enrollments. His ability to understand our institution's values and translate them into compelling digital content was exceptional."</p>
+</div>
+</div>
+<div class="testimonial-slide min-w-full px-4">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520young%2520south%2520asian%2520woman%2520in%2520business%2520casual%2520attire%252C%2520marketing%2520director%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520high%2520quality%2520portrait&width=200&height=200&seq=10&orientation=squarish'); background-size: cover; background-position: center;"></div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800">Ayesha Khan</h3>
+<p class="text-gray-600">Marketing Director, Anymob.pk</p>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"Working with Sameer on our cashback campaign strategy was a game-changer. His data-driven approach and creative execution helped us achieve a 45% increase in user acquisition. He's incredibly responsive and truly understands how to balance creativity with measurable results."</p>
+</div>
+</div>
+<div class="testimonial-slide min-w-full px-4">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 rounded-full overflow-hidden mr-4" style="background-image: url('https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520middle-aged%2520south%2520asian%2520man%2520in%2520casual%2520business%2520attire%252C%2520restaurant%2520owner%252C%2520friendly%2520expression%252C%2520neutral%2520background%252C%2520high%2520quality%2520portrait&width=200&height=200&seq=11&orientation=squarish'); background-size: cover; background-position: center;"></div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800">Imran Malik</h3>
+<p class="text-gray-600">Owner, Foodies Cafe</p>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 italic">"As a small business owner, I was skeptical about investing in digital marketing, but Sameer proved its value immediately. His local marketing campaign increased our foot traffic by 40% and online orders by 65%. His strategies were tailored perfectly to our budget and target audience."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8">
+<button id="prev-testimonial" class="w-10 h-10 flex items-center justify-center bg-white text-gray-600 rounded-full shadow-md hover:bg-gray-50 focus:outline-none mr-4 whitespace-nowrap !rounded-button">
+<i class="ri-arrow-left-s-line"></i>
+</button>
+<button id="next-testimonial" class="w-10 h-10 flex items-center justify-center bg-white text-gray-600 rounded-full shadow-md hover:bg-gray-50 focus:outline-none whitespace-nowrap !rounded-button">
+<i class="ri-arrow-right-s-line"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+    <div class="text-center mb-16 fade-in">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Let's discuss how I can help elevate your brand's digital presence.</p>
+    </div>
+    <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-1/2 fade-in">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="bg-white p-8 rounded-lg shadow-md">
+                <input type="hidden" name="access_key" value="834afef2-1d6b-4f8e-94ff-837d8549cc03">
+                <input type="hidden" name="subject" id="form-subject"> <!-- Added for subject fix -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="mb-6 form-group relative">
+                    <input type="text" name="name" id="name" class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-800" placeholder=" " required>
+                    <label for="name" class="absolute left-4 top-3 text-gray-500 pointer-events-none">Your Name</label>
+                </div>
+                <div class="mb-6 form-group relative">
+                    <input type="email" name="email" id="email" class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-800" placeholder=" " required>
+                    <label for="email" class="absolute left-4 top-3 text-gray-500 pointer-events-none">Your Email</label>
+                </div>
+                <div class="mb-6 form-group relative">
+                    <input type="text" name="subject" id="subject" class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-800" placeholder=" " required>
+                    <label for="subject" class="absolute left-4 top-3 text-gray-500 pointer-events-none">Subject</label>
+                </div>
+                <div class="mb-6 form-group relative">
+                    <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary bg-white text-gray-800" placeholder=" " required></textarea>
+                    <label for="message" class="absolute left-4 top-3 text-gray-500 pointer-events-none">Your Message</label>
+                </div>
+                <div class="mb-6">
+                    <label class="flex items-center cursor-pointer">
+                        <input type="checkbox" name="agree" id="consent" class="hidden" required>
+                        <span class="custom-checkbox mr-3"></span>
+                        <span class="text-gray-600 text-sm">I agree to the processing of my personal data.</span>
+                    </label>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-button font-medium hover:bg-blue-600 transition duration-300 shadow-md whitespace-nowrap">
+                    Send Message
+                </button>
+            </form>
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const button = e.target.querySelector('button[type="submit"]');
+                    const originalText = button.textContent;
+                    
+                    // Copy subject to hidden field before submission
+                    document.getElementById('form-subject').value = document.getElementById('subject').value;
+                    
+                    button.disabled = true;
+                    button.textContent = 'Sending...';
+                    button.classList.add('cursor-not-allowed');
+
+                    try {
+                        const response = await fetch(e.target.action, {
+                            method: 'POST',
+                            body: new FormData(e.target),
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        
+                        if (response.ok) {
+                            alert('Message sent successfully!');
+                            e.target.reset();
+                        } else {
+                            throw new Error('Failed to send message');
+                        }
+                    } catch (error) {
+                        alert('Error: Please try again later.');
+                    } finally {
+                        button.disabled = false;
+                        button.textContent = originalText;
+                        button.classList.remove('cursor-not-allowed');
+                    }
+                });
+            </script>
+        </div>
+        <div class="md:w-1/2 fade-in">
+            <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+                            <i class="ri-map-pin-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-1">Location</h4>
+                            <p class="text-gray-600">Khanpur, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+                            <i class="ri-mail-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-1">Email</h4>
+                            <p class="text-gray-600">ch.sameer1100@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+                            <i class="ri-phone-line text-primary"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-gray-800 mb-1">Phone</h4>
+                            <p class="text-gray-600">+92 308 6706622</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <h4 class="text-lg font-medium text-gray-800 mb-4">Connect With Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/sameerdigitalstrategist/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="social-icon w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sameerdigitalstrategist" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="social-icon w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sameerdigitalstrategist/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="social-icon w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/sameerdigitalstrategist/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        class="social-icon w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-8 bg-gray-900 text-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<p class="text-sm text-gray-400">© 2025 Sameer Asif. All rights reserved.</p>
+</div>
+<div class="flex space-x-6">
+<a href="#home" class="text-sm text-gray-400 hover:text-white transition duration-300">Home</a>
+<a href="#about" class="text-sm text-gray-400 hover:text-white transition duration-300">About</a>
+<a href="#expertise" class="text-sm text-gray-400 hover:text-white transition duration-300">Expertise</a>
+<a href="#portfolio" class="text-sm text-gray-400 hover:text-white transition duration-300">Portfolio</a>
+<a href="#contact" class="text-sm text-gray-400 hover:text-white transition duration-300">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Case Study Modals -->
+<!-- Education Case Study -->
+<div id="education-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520college%2520campus%2520with%2520students%2520walking%252C%2520educational%2520institution%252C%2520professional%2520photography%252C%2520clean%2520architecture%252C%2520bright%2520and%2520welcoming%2520atmosphere%252C%2520academic%2520setting%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=20&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">KIPS College</h2>
+<p class="text-white/90">Digital Admissions Campaign</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Education</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Social Media</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Email Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Paid Advertising</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">30%</h3>
+<p class="text-gray-600">Increase in Admissions</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">65%</h3>
+<p class="text-gray-600">Higher Website Traffic</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">3.2x</h3>
+<p class="text-gray-600">ROI on Ad Spend</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">KIPS College was facing increasing competition in the higher education market and needed to boost their admissions for the upcoming academic year. Their previous marketing efforts were primarily offline, with limited digital presence and engagement.</p>
+<p class="text-gray-600">The institution needed a comprehensive digital strategy that would showcase their academic excellence, campus facilities, and student success stories to prospective students and their parents.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-target-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Audience Segmentation</h4>
+<p class="text-gray-600">Created detailed personas for different target audiences: high school graduates, parents, and career-changers seeking higher education.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-video-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Content Strategy</h4>
+<p class="text-gray-600">Developed a content calendar featuring student testimonials, faculty interviews, virtual campus tours, and program highlights.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-advertisement-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Multi-Channel Campaign</h4>
+<p class="text-gray-600">Implemented targeted Facebook and Instagram ads, Google Search campaigns, and YouTube pre-roll videos to reach potential students.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Email Nurture Sequence</h4>
+<p class="text-gray-600">Created a 6-part email sequence for prospective students who expressed interest, highlighting different aspects of college life and academic offerings.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The comprehensive digital campaign delivered exceptional results for KIPS College:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>30% year-over-year increase in student admissions</li>
+<li>65% increase in website traffic during the campaign period</li>
+<li>42% higher engagement rate on social media platforms</li>
+<li>3.2x return on ad spend across all digital channels</li>
+<li>28% increase in campus tour registrations</li>
+<li>Virtual open day event attracted 450+ attendees (3x more than previous in-person events)</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"Sameer's strategic approach to our digital marketing completely transformed our admissions process. His ability to understand our institution's values and translate them into compelling digital content was exceptional. The results speak for themselves – a 30% increase in enrollments is beyond what we thought possible."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Farhan Ahmed</p>
+<p class="text-gray-500">Principal, KIPS College</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- E-commerce Case Study -->
+<div id="ecommerce-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=e-commerce%2520mobile%2520app%2520interface%2520on%2520smartphone%252C%2520cashback%2520promotion%2520graphics%252C%2520professional%2520product%2520photography%252C%2520clean%2520design%252C%2520shopping%2520app%2520UI%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=21&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">Anymob.pk</h2>
+<p class="text-white/90">Cashback Campaign Strategy</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">E-commerce</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Mobile App Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Loyalty Program</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">User Acquisition</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">45%</h3>
+<p class="text-gray-600">Increase in User Acquisition</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">25%</h3>
+<p class="text-gray-600">Higher Retention Rate</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">38%</h3>
+<p class="text-gray-600">Increase in Average Order Value</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">Anymob.pk, a growing e-commerce mobile app in Pakistan, was facing intense competition from larger platforms. They needed to increase their user base while ensuring customer retention and higher average order values.</p>
+<p class="text-gray-600">The company had limited marketing budget compared to competitors but wanted to create a distinctive value proposition that would attract and retain customers in a crowded marketplace.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-refund-2-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Tiered Cashback Program</h4>
+<p class="text-gray-600">Designed a multi-level cashback system that rewarded both new users and repeat customers with increasing benefits based on purchase frequency and value.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-user-add-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Referral Campaign</h4>
+<p class="text-gray-600">Implemented a "Refer & Earn" program where existing users received additional cashback for each new customer they brought to the platform.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-notification-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Push Notification Strategy</h4>
+<p class="text-gray-600">Created a segmented push notification system that delivered personalized cashback offers based on user browsing and purchase history.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-instagram-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Influencer Partnerships</h4>
+<p class="text-gray-600">Collaborated with micro-influencers in Pakistan to promote the cashback program through authentic content and exclusive promo codes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The cashback campaign strategy delivered significant results for Anymob.pk:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>45% increase in new user acquisition within the first 3 months</li>
+<li>25% improvement in user retention rates compared to the previous quarter</li>
+<li>38% increase in average order value as users maximized their cashback benefits</li>
+<li>62% of new users came through the referral program, reducing acquisition costs</li>
+<li>App store rating improved from 3.8 to 4.6 stars</li>
+<li>Featured in two major tech publications as an innovative e-commerce platform</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"Working with Sameer on our cashback campaign strategy was a game-changer for Anymob.pk. His data-driven approach and creative execution helped us achieve a 45% increase in user acquisition while significantly improving our retention rates. He's incredibly responsive and truly understands how to balance creativity with measurable results."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Ayesha Khan</p>
+<p class="text-gray-500">Marketing Director, Anymob.pk</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Agency Case Study -->
+<div id="agency-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=marketing%2520agency%2520office%2520environment%252C%2520creative%2520workspace%252C%2520professional%2520branding%2520materials%252C%2520marketing%2520strategy%2520documents%252C%2520clean%2520modern%2520design%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=22&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">Aura Marketing</h2>
+<p class="text-white/90">Agency Rebranding & Digital Strategy</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Agency</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Branding</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Content Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Lead Generation</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">60%</h3>
+<p class="text-gray-600">Increase in Client Acquisition</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">85%</h3>
+<p class="text-gray-600">Growth in Website Traffic</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">3x</h3>
+<p class="text-gray-600">Increase in Qualified Leads</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">Aura Marketing, a local marketing agency, was struggling to differentiate itself in a competitive market. Despite having talented staff and quality services, they were perceived as just another small agency without a clear specialization or unique value proposition.</p>
+<p class="text-gray-600">The agency needed a complete rebrand and digital strategy overhaul to establish itself as a premium service provider and attract higher-value clients.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-palette-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Brand Identity Redesign</h4>
+<p class="text-gray-600">Developed a sophisticated new visual identity with a focus on creativity and data-driven results, including logo, color palette, typography, and brand guidelines.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-global-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Website Transformation</h4>
+<p class="text-gray-600">Redesigned the agency website with a focus on showcasing case studies, client results, and industry expertise through a modern, conversion-optimized design.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-article-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Content Authority Strategy</h4>
+<p class="text-gray-600">Created an industry-focused content plan with in-depth articles, case studies, and thought leadership pieces that positioned the agency as experts in specific marketing niches.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-linkedin-box-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">LinkedIn Lead Generation</h4>
+<p class="text-gray-600">Implemented a targeted LinkedIn strategy for agency principals, focusing on relationship building with decision-makers at potential client companies.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The rebranding and digital strategy delivered transformative results for Aura Marketing:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>60% increase in new client acquisition within 6 months</li>
+<li>85% growth in website traffic with 4.5x improvement in time-on-site</li>
+<li>3x increase in qualified leads through the website and LinkedIn</li>
+<li>42% higher average project value from new clients</li>
+<li>Featured in two industry publications as a rising agency</li>
+<li>Successfully repositioned as specialists in data-driven creative marketing</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"Sameer's strategic vision completely transformed our agency's market position. The comprehensive rebrand and digital strategy he developed has been instrumental in attracting higher-value clients and establishing us as industry specialists. Within just 6 months, we saw a 60% increase in new client acquisition and a significant improvement in the quality of projects we're winning."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Zain Malik</p>
+<p class="text-gray-500">Founder & CEO, Aura Marketing</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- School Case Study -->
+<div id="school-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=private%2520school%2520campus%252C%2520modern%2520educational%2520facilities%252C%2520students%2520in%2520uniform%252C%2520professional%2520school%2520photography%252C%2520bright%2520classrooms%252C%2520learning%2520environment%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=23&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">KFS School</h2>
+<p class="text-white/90">Social Media & Content Strategy</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Education</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Social Media</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Content Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Community Building</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">75%</h3>
+<p class="text-gray-600">Increase in Parent Engagement</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">120%</h3>
+<p class="text-gray-600">Growth in Social Media Following</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">35%</h3>
+<p class="text-gray-600">Increase in Enrollment Inquiries</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">KFS School, a well-established private school, was struggling with parent engagement and community building in an increasingly digital world. Their communication was primarily through traditional channels like printed newsletters and occasional emails.</p>
+<p class="text-gray-600">The school needed to modernize its approach to connect with current parents, showcase student achievements, and attract prospective families while maintaining their reputation for academic excellence and traditional values.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-calendar-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Content Calendar Development</h4>
+<p class="text-gray-600">Created a structured content calendar that balanced academic achievements, extracurricular activities, student spotlights, and educational philosophy content.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-video-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Visual Storytelling</h4>
+<p class="text-gray-600">Implemented a visual-first approach with high-quality photography and short-form videos showcasing classroom activities, sports events, and student projects.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-community-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Parent Ambassador Program</h4>
+<p class="text-gray-600">Launched a parent ambassador initiative where selected parents shared their positive experiences and participated in content creation for authentic testimonials.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-facebook-circle-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Facebook Community Building</h4>
+<p class="text-gray-600">Revitalized the school's Facebook page and created a private group for current parents to foster community discussions and information sharing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The social media and content strategy delivered significant results for KFS School:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>75% increase in parent engagement across digital platforms</li>
+<li>120% growth in social media following within 6 months</li>
+<li>35% increase in enrollment inquiries attributed to social media content</li>
+<li>Parent satisfaction survey scores improved by 28%</li>
+<li>School events saw 45% higher attendance after social promotion</li>
+<li>Featured in a local education magazine for innovative parent communication</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"Sameer's content strategy has completely transformed how we connect with our school community. The focus on showcasing student achievements and school values through compelling visual content has resulted in unprecedented levels of parent engagement. We've seen a 75% increase in digital interaction and significantly higher attendance at school events. His approach perfectly balanced our traditional values with modern communication methods."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Nadia Rahman</p>
+<p class="text-gray-500">Principal, KFS School</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Restaurant Case Study -->
+<div id="restaurant-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520cafe%2520interior%252C%2520stylish%2520food%2520presentation%252C%2520professional%2520food%2520photography%252C%2520restaurant%2520branding%2520materials%252C%2520clean%2520aesthetic%252C%2520coffee%2520shop%2520atmosphere%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=24&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">Foodies Cafe</h2>
+<p class="text-white/90">Local Marketing Campaign</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Food & Beverage</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Local SEO</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Influencer Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Geo-targeted Ads</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">40%</h3>
+<p class="text-gray-600">Increase in Foot Traffic</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">65%</h3>
+<p class="text-gray-600">Growth in Online Orders</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">4.8</h3>
+<p class="text-gray-600">Google Rating (from 3.9)</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">Foodies Cafe, a local restaurant in Lahore, was struggling with customer acquisition despite having excellent food and ambiance. Located in a competitive area with many dining options, they needed to stand out and attract both dine-in customers and online orders.</p>
+<p class="text-gray-600">The cafe had a limited marketing budget and needed a strategy that would maximize their return on investment while building a loyal customer base in their local area.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Local SEO Optimization</h4>
+<p class="text-gray-600">Completely revamped their Google Business Profile with high-quality photos, updated menu, and optimized descriptions targeting local search terms.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-user-star-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Micro-Influencer Campaign</h4>
+<p class="text-gray-600">Partnered with 15 local food bloggers and micro-influencers with 5K-20K followers to create authentic content featuring signature dishes.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-facebook-circle-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Geo-targeted Facebook Ads</h4>
+<p class="text-gray-600">Implemented highly targeted Facebook and Instagram ad campaigns focused on users within a 5km radius of the cafe with interests in dining out.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-coupon-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Digital Loyalty Program</h4>
+<p class="text-gray-600">Created a digital punch card system through WhatsApp that rewarded repeat customers and encouraged referrals with special offers.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The local marketing campaign delivered exceptional results for Foodies Cafe:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>40% increase in foot traffic within 3 months</li>
+<li>65% growth in online orders through food delivery platforms</li>
+<li>Google rating improved from 3.9 to 4.8 stars with 3x more reviews</li>
+<li>Instagram following grew by 280% in 6 months</li>
+<li>Weekday business increased by 52%, addressing previous slow periods</li>
+<li>Featured in a local "Best Hidden Gems" food guide</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"As a small business owner, I was skeptical about investing in digital marketing, but Sameer proved its value immediately. His local marketing campaign increased our foot traffic by 40% and online orders by 65%. The influencer partnerships brought in exactly the type of customers we wanted to attract, and his strategies were tailored perfectly to our budget and target audience. The return on investment has been remarkable."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Imran Malik</p>
+<p class="text-gray-500">Owner, Foodies Cafe</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deals Case Study -->
+<div id="deals-case-study" class="case-study-modal">
+<div class="case-study-content max-w-4xl mx-auto bg-white rounded-lg shadow-2xl overflow-hidden">
+<div class="relative">
+<div class="h-64 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=e-commerce%2520deals%2520website%2520on%2520laptop%2520screen%252C%2520discount%2520promotions%252C%2520professional%2520product%2520photography%252C%2520online%2520shopping%2520interface%252C%2520clean%2520web%2520design%252C%2520high%2520quality%2520landscape%2520view&width=1200&height=400&seq=25&orientation=landscape')"></div>
+<div class="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/50 to-transparent">
+<div class="p-8">
+<h2 class="text-3xl font-bold text-white mb-2">Bonfire</h2>
+<p class="text-white/90">E-commerce Promotional Strategy</p>
+</div>
+</div>
+<button class="close-modal absolute top-4 right-4 text-white hover:text-primary w-10 h-10 flex items-center justify-center bg-black/30 rounded-full">
+<i class="ri-close-line ri-xl"></i>
+</button>
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-4 mb-8">
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">E-commerce</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Email Marketing</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Social Media</span>
+</div>
+<div class="bg-blue-50 px-4 py-2 rounded-full">
+<span class="text-primary text-sm font-medium">Conversion Optimization</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">120%</h3>
+<p class="text-gray-600">Increase in Sales</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">48%</h3>
+<p class="text-gray-600">Higher Conversion Rate</p>
+</div>
+<div class="text-center p-4 border border-gray-100 rounded-lg">
+<h3 class="text-4xl font-bold text-primary mb-2">32%</h3>
+<p class="text-gray-600">Increase in Average Order Value</p>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+<p class="text-gray-600 mb-4">Bonfire, an e-commerce platform specializing in flash sales and limited-time offers, was experiencing declining sales and customer engagement. Their promotional strategy had become predictable, and they were struggling to stand out in a crowded marketplace.</p>
+<p class="text-gray-600">The company needed a fresh approach to their promotional strategy that would reignite customer interest, increase conversion rates, and boost average order values during key campaign periods.</p>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Strategy</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-calendar-event-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Themed Campaign Calendar</h4>
+<p class="text-gray-600">Developed a strategic promotional calendar with themed events beyond traditional sales periods, creating anticipation and exclusivity around each campaign.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-mail-open-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Segmented Email Strategy</h4>
+<p class="text-gray-600">Implemented a highly segmented email marketing approach based on purchase history, browsing behavior, and engagement levels with personalized offers.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-timer-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Scarcity and Urgency Tactics</h4>
+<p class="text-gray-600">Redesigned product pages with real-time inventory counters, countdown timers, and social proof elements to drive immediate purchasing decisions.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-instagram-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-800 mb-1">Social Media Teasers</h4>
+<p class="text-gray-600">Created a multi-phase social media strategy with product teasers, behind-the-scenes content, and exclusive early access for followers.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-4">The Results</h3>
+<p class="text-gray-600 mb-4">The e-commerce promotional strategy delivered exceptional results for Bonfire Deals:</p>
+<ul class="space-y-2 text-gray-600 list-disc pl-5">
+<li>120% increase in sales during promotional periods compared to previous campaigns</li>
+<li>48% improvement in website conversion rate</li>
+<li>32% increase in average order value</li>
+<li>Email open rates improved from 18% to 42%</li>
+<li>Social media engagement increased by 85%</li>
+<li>Customer acquisition cost decreased by 35%</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold text-gray-800 mb-4">Client Testimonial</h3>
+<div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary italic text-gray-600">
+"Sameer's promotional strategy completely transformed our e-commerce performance. His innovative approach to our campaigns brought fresh energy to our brand and delivered results beyond our expectations. The 120% increase in sales during promotional periods has had a significant impact on our bottom line, and the improved conversion rates have continued even outside of campaign periods. His data-driven approach combined with creative marketing tactics was exactly what we needed."
+<div class="mt-4 font-normal not-italic">
+<p class="font-medium text-gray-800">Saad Qureshi</p>
+<p class="text-gray-500">Marketing Manager, Bonfire Deals</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Fade-in animation on scroll
+const fadeElements = document.querySelectorAll('.fade-in');
+function checkFade() {
+fadeElements.forEach(element => {
+const elementTop = element.getBoundingClientRect().top;
+const elementVisible = 150;
+if (elementTop < window.innerHeight - elementVisible) {
+element.classList.add('visible');
+}
+});
+}
+window.addEventListener('scroll', checkFade);
+checkFade(); // Check on initial load
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Progress bar animation
+const progressBars = document.querySelectorAll('.progress-bar-fill');
+function animateProgressBars() {
+progressBars.forEach(bar => {
+const width = bar.getAttribute('data-width');
+bar.style.width = width;
+});
+}
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+setTimeout(animateProgressBars, 300);
+observer.unobserve(entry.target);
+}
+});
+});
+const skillsSection = document.querySelector('#about');
+if (skillsSection) {
+observer.observe(skillsSection);
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+// Close mobile menu when clicking a link
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.add('hidden');
+});
+});
+// Header scroll effect
+const header = document.querySelector('header');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+const currentScroll = window.pageYOffset;
+if (currentScroll <= 0) {
+header.classList.remove('shadow-lg');
+} else {
+header.classList.add('shadow-lg');
+}
+lastScroll = currentScroll;
+});
+// Testimonial slider
+const slider = document.getElementById('testimonial-slider');
+const prevButton = document.getElementById('prev-testimonial');
+const nextButton = document.getElementById('next-testimonial');
+const slides = document.querySelectorAll('.testimonial-slide');
+let currentSlide = 0;
+const slideCount = slides.length;
+function updateSlider() {
+slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+prevButton.addEventListener('click', function() {
+currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+updateSlider();
+});
+nextButton.addEventListener('click', function() {
+currentSlide = (currentSlide + 1) % slideCount;
+updateSlider();
+});
+// Auto slide every 5 seconds
+setInterval(function() {
+currentSlide = (currentSlide + 1) % slideCount;
+updateSlider();
+}, 5000);
+// Case Study Modal Functionality
+const openButtons = document.querySelectorAll('.open-case-study');
+const closeButtons = document.querySelectorAll('.close-modal');
+const modals = {
+'education': document.getElementById('education-case-study'),
+'ecommerce': document.getElementById('ecommerce-case-study'),
+'agency': document.getElementById('agency-case-study'),
+'school': document.getElementById('school-case-study'),
+'restaurant': document.getElementById('restaurant-case-study'),
+'deals': document.getElementById('deals-case-study')
+};
+openButtons.forEach(button => {
+button.addEventListener('click', function() {
+const caseStudy = this.getAttribute('data-case-study');
+if (modals[caseStudy]) {
+modals[caseStudy].style.display = 'block';
+document.body.style.overflow = 'hidden';
+}
+});
+});
+closeButtons.forEach(button => {
+button.addEventListener('click', function() {
+const modal = this.closest('.case-study-modal');
+if (modal) {
+modal.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+});
+});
+// Close modal when clicking outside the content
+window.addEventListener('click', function(event) {
+if (event.target.classList.contains('case-study-modal')) {
+event.target.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+});
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+if (event.key === 'Escape') {
+document.querySelectorAll('.case-study-modal').forEach(modal => {
+if (modal.style.display === 'block') {
+modal.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+});
+}
+});
+});
+</script>
+</body>
+</html>
+
